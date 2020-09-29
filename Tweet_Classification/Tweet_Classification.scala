@@ -13,17 +13,17 @@ import org.apache.spark.mllib.linalg.{Vector, Vectors}
 import org.apache.log4j.{Level, Logger}
 import org.apache.spark.sql.Row
 
-object Assignment13_Q11{
+object Tweet_Classification{
   def main(args: Array[String]) {
 val rootLogger = Logger.getRootLogger()
 rootLogger.setLevel(Level.ERROR)
 Logger.getLogger("org.apache.spark").setLevel(Level.ERROR)
 Logger.getLogger("org.spark-project").setLevel(Level.ERROR)
-val spark = SparkSession.builder.master("yarn").appName("Assignment13_Qts11").getOrCreate()
+val spark = SparkSession.builder.master("yarn").appName("Tweet_Classification_Qts11").getOrCreate()
 
 println("Read the CSV file into spark Dataframe to perform data frame related operations. Keep the actual header and schema.")
 
-val dftweet = spark.read.format("csv").option("header", "true").option("inferSchema", "true").option("mode", "PERMISSIVE").load("/user/edureka_766323/Assignment13/train_E6oV3lV.csv")
+val dftweet = spark.read.format("csv").option("header", "true").option("inferSchema", "true").option("mode", "PERMISSIVE").load("/user/username/Tweet_Classification/train_E6oV3lV.csv")
 
 println("Print the top 5 rows of the data frame (without truncate) to get some initial understanding of the data.")
 dftweet.show(5, false)
