@@ -81,10 +81,6 @@ kmautomodel.clusterCenters.foreach(println)
 }
 
 /*
-//sbt project folder - /mnt/bigdatapgp/edureka_766323/E7_Qts15
-// Jar location- /mnt/bigdatapgp/edureka_766323/E7_Qts15/target/scala-2.11/e7_qts15_2.11-1.0.jar
-// Command to run - spark2-submit --master local[4] --class E7_Qts15 /mnt/bigdatapgp/edureka_766323/E7_Qts15/target/scala-2.11/e7_qts15_2.11-1.0.jar
-
 //From above analysis we can see that clusters 0 consists of cars with aroud 6 cylinders and cluster 2 consists of cars of 8 cylinders on avg, cluster 0 is suggestive of SUVs
 //and cluster 2 is suggestive of sports cars. Cluster 1 and 3 however have similar mean features with avg 4 cylinders suggestive of economy Sedans.
 //From above analysis its suggestive of 3 actual cluaters. We should  perform K-means again with K=3.
