@@ -7,7 +7,7 @@ import org.apache.log4j.{Level, Logger}
 import org.apache.spark.sql.Row
 import org.apache.spark.sql.DataFrameStatFunctions
 
-object E7_Qts15{
+object Auto_KMeans{
   def main(args: Array[String]) {
 val rootLogger = Logger.getRootLogger()
 rootLogger.setLevel(Level.ERROR)
